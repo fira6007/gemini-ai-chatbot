@@ -8,7 +8,7 @@ export default async function input(message) {
   return new Promise((resolve) => {
     rl.question(message, (answer) => {
       rl.close();
-      resolve(answer);
+      resolve(answer.toLowerCase().trim());
     });
   });
 }

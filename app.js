@@ -4,9 +4,9 @@ async function main() {
     let userQuestion;
     let message;
     do {
-        userQuestion= await input(message || "ask me anything: ")
+        userQuestion= await input(message || "Ask me anything and type 'exit' to exit the chat: ")
         
-        message = await ask(userQuestion) +"\n"
+        userQuestion =="exit"? console.log("thanks for chatting with me... see you next time") : message = await ask(userQuestion) +"\n"
         
     
 } while (userQuestion !== "exit");
